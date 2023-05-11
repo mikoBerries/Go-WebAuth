@@ -12,6 +12,7 @@ func main() {
 	for i := 1; i <= 64; i++ {
 		key = append(key, byte(i))
 	}
+
 	checkSignature()
 }
 
