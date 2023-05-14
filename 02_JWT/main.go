@@ -32,7 +32,7 @@ func (u *UserClaims) Valid() error {
 
 func createToken(c *UserClaims) (string, error) {
 	t := jwt.NewWithClaims(jwt.SigningMethodHS512, c)
-	signedToken, err := t.SignedString(key)
+	signedToken, err := t.SignedString(keys[""].key)
 	if err != nil {
 		return "", fmt.Errorf("error happend in createToken when signedString %w", err)
 	}
