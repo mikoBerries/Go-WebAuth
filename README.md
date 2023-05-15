@@ -47,3 +47,7 @@ JWT (Json Web Token)
 The server can use this information to authenticate the user and determine whether they have the appropriate permissions to access the requested resource.
 
 It is important to note that the JWT should not contain any sensitive information, such as the user's password. This is because the JWT is sent to the client in the clear, and it could be intercepted by a malicious actor.
+
+●  JWT can be stored in cookie if it's web client or local storage if it's from mobile.
+
+●  For best practice store at jwt sessionId that reference to DB data so we can changes permission ASAP with update DB. 

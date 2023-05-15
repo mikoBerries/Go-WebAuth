@@ -57,11 +57,10 @@ func main() {
 			if t.Method.Alg() != jwt.SigningMethodHS512.Name {
 				return nil, fmt.Errorf("eror when parse signing method")
 			}
-			t.Method.Verify()
+
 			//return key to verified this token string
 			return []byte(mySigningKey), nil
 		})
-	// somethings := t.Header["something"]
 
 	if err != nil {
 		log.Fatalln(err)
@@ -73,7 +72,7 @@ func main() {
 		fmt.Println("UserName\t", claims.UserName)
 		fmt.Println("Role\t", claims.Role)
 		// claims := t.Claims.(*jwt.MapClaims)
-		// &claims["user"]
+
 		// fmt.Println("user ID\t", claims["UserId"])
 		// fmt.Println("UserName\t", claims["UserName"])
 		// fmt.Println("Role\t", claims["Role"])
