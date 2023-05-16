@@ -51,3 +51,23 @@ It is important to note that the JWT should not contain any sensitive informatio
 ●  JWT can be stored in cookie if it's web client or local storage if it's from mobile.
 
 ●  For best practice store at jwt sessionId that reference to DB data so we can changes permission ASAP with update DB. 
+
+OAuth2 (https://aaronparecki.com/oauth-2-simplified/#authorization)
+-------------------------------------------
+
+
+
+Graphql
+--------
+http://spec.graphql.org/June2018/#sec-Overview
+
+There are three types of operations that GraphQL models:
+
+query – a read‐only fetch. --> in oauth login we just using read only data
+mutation – a write followed by a fetch.
+subscription – a long‐lived request that fetches data in response to source events.
+
+
+few useful library
+https://github.com/bashtian/jsonutils  for json
+https://transform.tools/json-to-go
